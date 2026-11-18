@@ -38,10 +38,10 @@ Therefore we close the first powershell and run again and we get :
 
 
 
-![Server running](.png)
+![Server running](bonstep2I.png)
 
 
-![Server running](.png)
+![Server running](bonstep2ps.png)
 
 
 
