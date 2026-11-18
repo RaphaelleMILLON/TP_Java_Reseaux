@@ -8,30 +8,27 @@ The objective of this step is to create a UDP server in Java that receives datag
 The server listens on a specified port and displays each received message along with the client's IP address and port number.
 
 
-The project contains two Java classes: UDPServer.java and Main.java
+The project contains one Java classes: UDPServer.java
 
 
 The UDPServer.java class implements the UDP server. It contains 2 constructors etc 
 
 
-The Main.java class contains the `main()` method which starts the server.
-If a port number is provided as an argument, the server uses that port. Otherwise, the default port 8080 is used.
+The default port is 8080. 
 
 PowerShell is the "client" 
 
 
-![Server running](IntelliJ_1.png)
+![Server running](commande_step_1)
 
 
-![Server running](IntelliJ_1.png)
+![Server running](Powershell_1.png)
 
-We can notice 
+We can notice we can connect
 **Step 2**
-We are using the ncat programm : 
+We are using the ncat programm in an other powershell 
 
 
-![Server running](IntelliJ_1.png)
+![Server running](step_.png)
 
-We can see thaat the port is 8080 and the running=false is the state before i laughed the main
-![Client running](Powershell_1.png)
-56090 is the port used by the client to send the message 
+We can see that the 2 servers are trying to use the same port (8080) at the same time but it is already being used by the first one 
