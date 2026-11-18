@@ -28,7 +28,7 @@ If a port number is provided as an argument, the server uses that port. Otherwis
 PowerShell is the "client" and we are using the ncat programm : 
 
 
-![Server running](OntelliJ_1.png)
+![Server running](IntelliJ_1.png)
 
 
 ![Client running](Powershell_1.png)
