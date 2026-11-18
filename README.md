@@ -111,6 +111,6 @@ The first 3 datagrams were successfully sent but for the 65,508 bytes datagram, 
 Here is the wireshark capture for localhost between 2 powershell (server and client) with protocol : UDP and with the port = 8080
 ![Wireshark](wiresharkstep7.png)
 
+In the Java programm, we change the int sizes int[] sizes = {10, 10000};
 
-
-
+![Wireshark](wiresharkstep7cap2.png)
