@@ -69,4 +69,4 @@ One computer acted as the UDP server and listened on port 8080. The second compu
 ![Server running](step4moi.png)
 
 
-![Client running](step4pasmoi.png)
+![Client running](step4pasmoi.jpeg)
