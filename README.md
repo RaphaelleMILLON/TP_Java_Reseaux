@@ -11,16 +11,8 @@ The server listens on a specified port and displays each received message along 
 The project contains two Java classes: UDPServer.java and Main.java
 
 
-The UDPServer.java class implements the UDP server. It contains:
+The UDPServer.java class implements the UDP server. It contains 2 constructors etc 
 
-- Two constructors:
-  - A constructor that accepts a port number.
-  - A default constructor that uses port 8080.
-- A `launch()` method that starts the server and receives UDP datagrams in an infinite loop.
-- A 1024-byte buffer to receive incoming messages.
-- UTF-8 decoding to convert received bytes into strings.
-- The client's IP address and port retrieval.
-- A `toString()` method that describes the server's state.
 
 The Main.java class contains the `main()` method which starts the server.
 If a port number is provided as an argument, the server uses that port. Otherwise, the default port 8080 is used.
