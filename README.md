@@ -70,3 +70,13 @@ One computer acted as the UDP server and listened on port 8080. The second compu
 
 
 ![Client running](step4pasmoi.jpeg)
+
+
+
+**Step 5**
+
+We verify that the 3 lengh buffer can work
+
+![Verification](step5_3b.png)
+
+
