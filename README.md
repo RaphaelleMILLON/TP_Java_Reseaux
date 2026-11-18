@@ -47,7 +47,7 @@ Therefore we close the first powershell and run again and we get :
 
 ## UDP Client
 
-** Step 3 **
+**Step 3**
 
 So for this step we have one powershell that is the server and an other powershell that is the client
 
@@ -57,3 +57,16 @@ So for this step we have one powershell that is the server and an other powershe
 ![Client running](step3client.png)
 
 The client takes 2 command arguments : the server address (localhost) and the server port (8080)
+
+
+
+**Step 4**
+
+We tested the UDP communication between two computers connected to the same network.
+
+One computer acted as the UDP server and listened on port 8080. The second computer acted as the UDP client and sent messages to the server using its IPv4 address.
+
+![Server running](step4moi.png)
+
+
+![Client running](step4pasmoi.png)
