@@ -79,4 +79,28 @@ We verify that the 3 lengh buffer can work
 
 ![Verification](step5_3b.png)
 
+We have 2 powershell
+![Server](step5longmessage.png)
+We write a very long text and we choose a buffer of 64 octets (the smaller one)
+![Client](step5messagecoupe.png)
+
+we can notice that the text is shorten because the length of the buffer is way lower than the length of the text. 
+
+As we can see, the client is not informe of the cut and the rest of the text disappeared 
+
+
+
+**Step 6**
+Compare to the step 5, we take the largest buffer now
+
+
+
+
+
+
+
+
+
+
+
 
