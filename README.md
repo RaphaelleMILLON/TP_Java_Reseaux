@@ -29,6 +29,6 @@ We can notice we can connect
 We are using the ncat programm in an other powershell 
 
 
-![Server running](step_2.png)
+![Server running](step2.png)
 
 We can see that the 2 servers are trying to use the same port (8080) at the same time but it is already being used by the first one 
