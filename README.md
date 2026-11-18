@@ -92,9 +92,15 @@ As we can see, the client is not informe of the cut and the rest of the text dis
 
 **Step 6**
 Compare to the step 5, we take the largest buffer now
+We created a test program called UDPTest to send UDP datagrams of increasing sizes to the server, which was started with a receive buffer of 65,507 bytes.
 
 
+![Server](step6server.png)
 
+The tested datagram sizes were 1,000, 10,000, 65,507 and 65,508 bytes
+The first 3 datagrams were successfully sent but for the 65,508 bytes datagram, the operation failed with the error saying the message was larger than the maximum supported size. 
+
+![Client](step6.png)
 
 
 
