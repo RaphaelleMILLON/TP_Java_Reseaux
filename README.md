@@ -106,6 +106,10 @@ The first 3 datagrams were successfully sent but for the 65,508 bytes datagram, 
 
 
 
+**Step 7**
+
+Here is the wireshark capture for localhost between 2 powershell (server and client) with protocol : UDP and with the port = 8080
+![Wireshark](wiresharkstep7.png)
 
 
 
