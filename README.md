@@ -25,6 +25,7 @@ PowerShell is the "client"
 ![Server running](Powershell_1.png)
 
 We can notice we can connect
+
 **Step 2**
 We are using the ncat programm in an other powershell 
 
@@ -32,3 +33,16 @@ We are using the ncat programm in an other powershell
 ![Server running](step2.png)
 
 We can see that the 2 servers are trying to use the same port (8080) at the same time but it is already being used by the first one 
+
+Therefore we close the first powershell and run again and we get :
+
+
+
+![Server running](.png)
+
+
+![Server running](.png)
+
+
+
+
