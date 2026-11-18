@@ -22,5 +22,6 @@ PowerShell is the "client" and we are using the ncat programm :
 
 ![Server running](IntelliJ_1.png)
 
-
+We can see thaat the port is 8080 and the running=false is the state before i laughed the main
 ![Client running](Powershell_1.png)
+56090 is the port used by the client to send the message 
