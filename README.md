@@ -1,7 +1,7 @@
 # TP_Java_Reseaux
 Report on the Network Java lab
 
-
+## UDP SERVER
 **Step 1**
 The objective of this step is to create a UDP server in Java that receives datagrams from clients.
 
@@ -44,5 +44,7 @@ Therefore we close the first powershell and run again and we get :
 ![Server running](bonstep2ps.png)
 
 
+
+## UDP Client
 
 
