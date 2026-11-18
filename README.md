@@ -17,7 +17,17 @@ The UDPServer.java class implements the UDP server. It contains 2 constructors e
 The Main.java class contains the `main()` method which starts the server.
 If a port number is provided as an argument, the server uses that port. Otherwise, the default port 8080 is used.
 
-PowerShell is the "client" and we are using the ncat programm : 
+PowerShell is the "client" 
+
+
+![Server running](IntelliJ_1.png)
+
+
+![Server running](IntelliJ_1.png)
+
+We can notice 
+**Step 2**
+We are using the ncat programm : 
 
 
 ![Server running](IntelliJ_1.png)
