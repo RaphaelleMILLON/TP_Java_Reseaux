@@ -56,4 +56,4 @@ So for this step we have one powershell that is the server and an other powershe
 
 ![Client running](step3client.png)
 
-
+The client takes 2 command arguments : the server address (localhost) and the server port (8080)
