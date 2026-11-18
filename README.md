@@ -47,7 +47,7 @@ Therefore we close the first powershell and run again and we get :
 
 ## UDP Client
 
-**Step 3 **
+** Step 3 **
 
 So for this step we have one powershell that is the server and an other powershell that is the client
 
