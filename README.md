@@ -153,5 +153,7 @@ b) we send messages to several different ports, on which no server is listening.
 The client prefixes the typed line with its sequence number and sends 0:hello. The server extracts the number and the text, and displays seq=0 -> hello, with the client’s address and port
 
 <img width="749" height="145" alt="image" src="https://github.com/user-attachments/assets/61e15c3f-fe2a-44ed-856b-e2db106130be" />
+
+
 The server receives them in order (seq=0, seq=1, seq=2), so no [MISSING] or [OUT OF ORDER] message appears. This is expected on localhost, since the datagrams do not cross a real network.
 
