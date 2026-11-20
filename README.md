@@ -146,6 +146,21 @@ b) we send messages to several different ports, on which no server is listening.
 
 ![Ports](step9_a_server.png)
 
+
+
+c)
+
+We started and stopped the UDP client twice
+the IP address remains the same but the source port changed, therefore, we can confirm that the UDP is connectionless
+
+
+![Server](step9_c_server.png)
+
+
+![Client](step9_c_client.png)
+
+
+
 **Step 12**
 
 <img width="706" height="153" alt="image" src="https://github.com/user-attachments/assets/c2f334d0-4c1f-4ba4-908c-8fa3a5ae23b7" />
