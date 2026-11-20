@@ -184,6 +184,25 @@ After receiving message n, the server sends ACK:n back to the address and port o
 
 No acknowledgment is received for message 3, so after each 500 ms timeout the client sends the message again. After 5 unsuccessful attempts, it gives up and displays an error. With UDP, the client is not informed that the server is down. It only notices that no acknowledgment comes back.
 
+**Step 13**
+a) On localhost
+
+<img width="462" height="36" alt="image" src="https://github.com/user-attachments/assets/ca68e62e-d37a-477c-a394-355e31a7aeb1" />
+
+<img width="644" height="69" alt="image" src="https://github.com/user-attachments/assets/19edc019-1226-4023-9a69-c545b0227bdc" />
+
+
+The server received all of them (loss rate = 0 %). Both programs run on the same machine, so the datagrams never cross a real network, and the server reads them fast enough to keep its receive buffer from filling up.
+
+b)  between two machines of the room:
+
+Machine A:
+
+<img width="638" height="45" alt="image" src="https://github.com/user-attachments/assets/67be2a13-d5b9-4102-8277-0a553941c625" />
+
+Machine B:
+
+
 
 
 
