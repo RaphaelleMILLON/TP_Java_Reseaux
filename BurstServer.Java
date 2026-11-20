@@ -3,8 +3,6 @@ import java.net.DatagramSocket;
 import java.net.SocketTimeoutException;
 import java.nio.charset.StandardCharsets;
 
-// Step 13 : compte les datagrammes reçus et calcule le taux de perte
-// Usage : java BurstServer [port] [sleepMs]
 public class BurstServer {
 
     public static void main(String[] args) throws Exception {
@@ -21,8 +19,7 @@ public class BurstServer {
             int count = 0;
             int total = 0;
 
-            socket.setSoTimeout(0); // attendre le 1er message sans limite
-
+            socket.setSoTimeout(0); 
             try {
                 while (true) {
                     DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
@@ -30,14 +27,13 @@ public class BurstServer {
 
                     String msg = new String(packet.getData(), 0,
                             packet.getLength(), StandardCharsets.UTF_8);
-                    total = Integer.parseInt(msg.split(":")[1]); // N
+                    total = Integer.parseInt(msg.split(":")[1]); 
                     count++;
 
                     if (sleepMs > 0) {
                         Thread.sleep(sleepMs); // cas c) : serveur lent
                     }
 
-                    // Si plus rien n'arrive pendant 2 s, la rafale est finie
                     socket.setSoTimeout(2000);
                 }
             } catch (SocketTimeoutException e) {
