@@ -119,16 +119,22 @@ On the localhost interface, we have one IP packet for each datagram including th
 
 **Step 8**
 a) The receive buffer is chosen by the receiver because it is the server that decides how much memory it wants to allocate to store incoming datagrams.
-
 The sender does not know the receiver's available memory or buffer size. If a datagram is larger than the receiver's buffer, the received data may be damage.
 
 
 
+b)Sending datagrams larger than about 1,400 bytes is not recommended because they may need to be fragmented into several IP packets to travel across the network because of MTU
 
 
+## Connectionless communication
+
+**Step 9**
+a)
+
+![Client](wiresharkstep7.png)
 
 
-
+![Server](wiresharkstep7cap2.png)
 
 
 
