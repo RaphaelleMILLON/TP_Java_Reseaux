@@ -210,3 +210,38 @@ We tried to run the server on one laptop (IP address 10.10.27.30, ENSEA Wi-Fi ne
 c) On localhost again, with a server that waits a few milliseconds (Thread.sleep) after each datagram
 received:
 
+**Step 16**
+We created a Java class called MulticastReceiver to receive UDP multicast messages.
+
+We got into the group : "Joined multicast group"
+
+**Step 17**
+a) the three receptors receive the message 
+![1](step17_1.png)
+![2](step17_2.png)
+![3](step17_3.png)
+![4](step17_4.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
