@@ -282,9 +282,21 @@ c)
 ![my_computer](step17_c_envoie.png)
 <img width="770" height="211" alt="image" src="https://github.com/user-attachments/assets/ca4b429d-c133-473b-9738-7e762ab24159" />
 
-We tested multicast communication between different computers. Each computer used its own network interface to join the multicast group 239.0.0.1 on port 8888.
+We tested multicast communication between our two different computers. Each computer used its own network interface to join the multicast group 239.0.0.1 on port 8888.
 
+**Step 18**
 
+**Step 19**
+
+a) Unicast: the sender emits 20 datagrams, one per receiver. The same data crosses the network 20 times.
+Multicast: the sender emits only 1 datagram to the group address, and the network copies it only where needed to reach each receiver.
+
+So multicast uses much less bandwidth and less work for the sender, especially when there are many receivers.
+
+b) Broadcast is sent to all the hosts of the local network, even those that are not interested, so every machine has to receive and process it. With multicast, only the hosts that joined the group receive the message.
+Broadcast stays in the local network: routers do not forward it to other networks. Multicast can go further if the routers support it.
+
+c) TCP works with a connection between exactly two machines: one sender and one receiver, with ACKs and retransmissions managed for that single receiver. With many receivers, the sender would have to manage a separate connection and separate ACKs for each one. UDP has no connection and no ACK, so the same datagram can simply be delivered to many receivers at once.
 
 
 
