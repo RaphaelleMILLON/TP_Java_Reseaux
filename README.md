@@ -285,7 +285,7 @@ c)
 We tested multicast communication between our two different computers. Each computer used its own network interface to join the multicast group 239.0.0.1 on port 8888.
 
 **Step 18**
-
+![step18](setp18_receive.png)
 **Step 19**
 
 a) Unicast: the sender emits 20 datagrams, one per receiver. The same data crosses the network 20 times.
