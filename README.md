@@ -232,6 +232,24 @@ The server detects duplicates using the sequence numbers. Since the client waits
 
 **Step 15**
 
+a) The timeout should be a bit longer than the time a message needs to go to the server and for its ACK to come back.
+
+Too short: the client sends the message again even though the ACK was just about to arrive, which creates useless duplicates.
+Too long: when a message is really lost, the client waits a long time before sending it again, so everything becomes slow.
+
+b) Re-implemented:
+
+sequence numbers (to detect lost messages and duplicates);
+acknowledgments (ACK);
+retransmission after a timeout.
+
+Missing:
+
+the connection (TCP opens and closes a connection, UDP does not);
+sending several messages at once (our client waits for each ACK before sending the next message);
+slowing down when the receiver or the network is overloaded (as seen in Step 13 c);
+putting messages back in the right order.
+
 
 **Step 16**
 We created a Java class called MulticastReceiver to receive UDP multicast messages.
