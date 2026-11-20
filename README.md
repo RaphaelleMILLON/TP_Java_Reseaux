@@ -197,9 +197,9 @@ No acknowledgment is received for message 3, so after each 500 ms timeout the cl
 **Step 13**
 a) On localhost
 
-<img width="462" height="36" alt="image" src="https://github.com/user-attachments/assets/ca68e62e-d37a-477c-a394-355e31a7aeb1" />
 
-<img width="644" height="69" alt="image" src="https://github.com/user-attachments/assets/19edc019-1226-4023-9a69-c545b0227bdc" />
+![step13](Step_13_01.png)
+![step13](Step_13_02.png)
 
 
 The server received all of them (loss rate = 0 %). Both programs run on the same machine, so the datagrams never cross a real network, and the server reads them fast enough to keep its receive buffer from filling up.
@@ -208,7 +208,7 @@ b)  between two machines of the room:
 
 Machine A:
 
-<img width="638" height="45" alt="image" src="https://github.com/user-attachments/assets/67be2a13-d5b9-4102-8277-0a553941c625" />
+![step13](Step_13_04.png)
 
 Machine B:
 
@@ -220,9 +220,9 @@ We tried to run the server on one laptop (IP address 10.10.27.30, ENSEA Wi-Fi ne
 c) On localhost again, with a server that waits a few milliseconds (Thread.sleep) after each datagram
 received:
 
-<img width="521" height="55" alt="image" src="https://github.com/user-attachments/assets/73ac52e0-71ec-404f-a499-4d3bdaab3f5d" />
+![step13](Step_13_03.png)
 
-<img width="704" height="91" alt="image" src="https://github.com/user-attachments/assets/939abe9c-41c4-4242-b3a3-ec12ea575598" />
+![step13](Step_13_05.png)
 
 We restarted the server with a 1 ms pause (Thread.sleep(1)) after each received datagram, then sent the same burst of 10 000 datagrams. This time the server received only 6 690 of them, a loss rate of 33.10 %
 
@@ -230,11 +230,11 @@ In case a), the server reads fast enough, so the buffer never fills up. In case 
 
 **Step 14**
 
-<img width="683" height="627" alt="image" src="https://github.com/user-attachments/assets/e4a93aca-043b-4ed9-b5dc-136cc27616ff" />
+![step14](Step_14_01.png)
 
 Lost messages ([DROPPED MESSAGE]) are received again after retransmission. When an acknowledgment is lost ([DROPPED ACK]), the client sends the same message again and the server detects it as a duplicate.
 
-<img width="786" height="710" alt="image" src="https://github.com/user-attachments/assets/aed31b1b-d19d-4033-8163-25a763c20fa7" />
+![step14](Step_14_02.png)
 
 After each timeout, the client retransmits the message (attempts 2 and 3), and every message is finally acknowledged.
 
