@@ -220,6 +220,18 @@ In case a), the server reads fast enough, so the buffer never fills up. In case 
 
 **Step 14**
 
+<img width="683" height="627" alt="image" src="https://github.com/user-attachments/assets/e4a93aca-043b-4ed9-b5dc-136cc27616ff" />
+
+Lost messages ([DROPPED MESSAGE]) are received again after retransmission. When an acknowledgment is lost ([DROPPED ACK]), the client sends the same message again and the server detects it as a duplicate.
+
+<img width="786" height="710" alt="image" src="https://github.com/user-attachments/assets/aed31b1b-d19d-4033-8163-25a763c20fa7" />
+
+After each timeout, the client retransmits the message (attempts 2 and 3), and every message is finally acknowledged.
+
+The server detects duplicates using the sequence numbers. Since the client waits for the acknowledgment before sending the next message, a number smaller than the expected one can only be a message already received. The server ignores it but still sends the ACK again, otherwise the client would keep retransmitting it. For example, the ACK of message 4 was lost, so the client sent 4:e again and the server flagged it as [DUPLICATE]
+
+**Step 15**
+
 
 **Step 16**
 We created a Java class called MulticastReceiver to receive UDP multicast messages.
