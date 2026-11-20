@@ -130,16 +130,18 @@ b)Sending datagrams larger than about 1,400 bytes is not recommended because the
 
 **Step 9**
 a)
+So here we send a message from the client to the server before starting the server
+![Client](step9_a_client.png)
+The server doesn't reveice any message even when we stop sending messages to the server and starting it. 
 
-![Client](wiresharkstep7.png)
-
-
-![Server](wiresharkstep7cap2.png)
-
-
+![Server](step9_a_server.png)
 
 
 
 
 
+b) we send messages to several different ports, on which no server is listening. In Wireshark, we can see ICMP Destination Unreachable messages, specifically Port Unreachable messages. It means that the UDP datagram reaches a computer but there is no application listening on the destinbation port, so the computer can send an ICMP error message to inform the sender that the port is unreachable 
+![Wireshark](step9_a_server.png)
 
+
+![Ports](step9_a_server.png)
