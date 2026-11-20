@@ -21,8 +21,8 @@ public class UDPClient {
             int serverPort = Integer.parseInt(args[1]);
 
             DatagramSocket socket = new DatagramSocket();
-
-            // Step 12 : receive() attend 500 ms max, puis lève SocketTimeoutException
+            socket.setBroadcast(true);
+            
             socket.setSoTimeout(500);
             int maxAttempts = 5;
 
@@ -31,11 +31,11 @@ public class UDPClient {
             );
 
             String line;
-            int seq = 0; // Step 11 : numéro du prochain message
+            int seq = 0; 
 
             while ((line = in.readLine()) != null) {
 
-                // Step 11 : ajouter le numéro devant, ex "0:hello"
+                
                 String msg = seq + ":" + line;
                 byte[] data = msg.getBytes(StandardCharsets.UTF_8);
 
@@ -46,7 +46,7 @@ public class UDPClient {
                         serverPort
                 );
 
-                // ---- Step 12 : envoyer puis attendre l'ACK ----
+      
                 boolean acked = false;
 
                 for (int attempt = 1; attempt <= maxAttempts && !acked; attempt++) {
@@ -57,7 +57,7 @@ public class UDPClient {
                     try {
                         byte[] buf = new byte[100];
                         DatagramPacket ackPacket = new DatagramPacket(buf, buf.length);
-                        socket.receive(ackPacket); // attend 500 ms max
+                        socket.receive(ackPacket); 
 
                         String ack = new String(ackPacket.getData(), 0,
                                 ackPacket.getLength(), StandardCharsets.UTF_8);
@@ -68,7 +68,7 @@ public class UDPClient {
                         }
 
                     } catch (SocketTimeoutException e) {
-                        // Rien reçu en 500 ms -> on renvoie au tour suivant
+                        
                         System.out.println("Timeout for seq=" + seq);
                     }
                 }
