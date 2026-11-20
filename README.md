@@ -161,7 +161,7 @@ the IP address remains the same but the source port changed, therefore, we can c
 
 
 
-**Step 12**
+**Step 11**
 
 <img width="706" height="153" alt="image" src="https://github.com/user-attachments/assets/c2f334d0-4c1f-4ba4-908c-8fa3a5ae23b7" />
 
@@ -171,4 +171,22 @@ The client prefixes the typed line with its sequence number and sends 0:hello. T
 
 
 The server receives them in order (seq=0, seq=1, seq=2), so no [MISSING] or [OUT OF ORDER] message appears. This is expected on localhost, since the datagrams do not cross a real network.
+
+**Step 12**
+
+<img width="703" height="191" alt="image" src="https://github.com/user-attachments/assets/7074fae6-dac7-4fd3-8b7c-bbfd639685ea" />
+
+Each message is sent with its sequence number, and the client waits for the matching acknowledgment (ACK:0, ACK:1, ACK:2). All messages are acknowledged at the first attempt, so no retransmission is needed.
+
+<img width="644" height="196" alt="image" src="https://github.com/user-attachments/assets/f7184848-7c68-4f5c-8156-83bf31239a80" />
+
+After receiving message n, the server sends ACK:n back to the address and port of the sender (127.0.0.1:53416).
+
+<img width="388" height="186" alt="image" src="https://github.com/user-attachments/assets/bcde9628-0bad-49cf-9d7d-ab6ef87dc60b" />
+
+No acknowledgment is received for message 3, so after each 500 ms timeout the client sends the message again. After 5 unsuccessful attempts, it gives up and displays an error. With UDP, the client is not informed that the server is down. It only notices that no acknowledgment comes back.
+
+
+
+
 
