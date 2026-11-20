@@ -8,10 +8,10 @@ public class UDPServer {
 
     private int port;
     private int bufferSize;
-    private double dropRate;     // Step 14 : probabilité de perte simulée (0.2 = 20 %)
+    private double dropRate;    
     private DatagramSocket socket;
     private boolean running;
-    private int expectedSeq = 0; // Step 11 : numéro qu'on attend
+    private int expectedSeq = 0; 
 
     public UDPServer(int port, int bufferSize, double dropRate) {
         this.port = port;
@@ -61,13 +61,11 @@ public class UDPServer {
 
                 int clientPort = packet.getPort();
 
-                // ---- Step 14 : perte simulée du MESSAGE ----
                 if (Math.random() < dropRate) {
                     System.out.println("[DROPPED MESSAGE] " + msg);
                     continue; // on fait comme si rien n'était arrivé (pas d'ACK)
                 }
 
-                // ---- Step 11 : numéro de séquence ----
                 int sep = msg.indexOf(':');
                 if (sep == -1) {
                     System.out.println("Message without number: " + msg);
@@ -86,17 +84,14 @@ public class UDPServer {
                     expectedSeq = seq + 1;
 
                 } else {
-                    // Step 14 : numéro déjà reçu -> c'est un doublon
                     System.out.println("[DUPLICATE] seq=" + seq + " -> " + text + " (ignored)");
                 }
 
-                // ---- Step 14 : perte simulée de l'ACK ----
                 if (Math.random() < dropRate) {
                     System.out.println("  [DROPPED ACK:" + seq + "]");
                     continue; // l'ACK n'est pas envoyé -> le client renverra
                 }
 
-                // ---- Step 12 : renvoyer "ACK:n" (aussi pour un doublon) ----
                 byte[] ack = ("ACK:" + seq).getBytes(StandardCharsets.UTF_8);
                 DatagramPacket ackPacket = new DatagramPacket(
                         ack,
@@ -130,7 +125,6 @@ public class UDPServer {
                 ", running=" + running + "]";
     }
 
-    // Usage : java UDPServer [port] [bufferSize] [dropRate]
     public static void main(String[] args) {
         int port = 8080;
         int bufferSize = 1024;
