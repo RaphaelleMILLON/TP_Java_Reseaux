@@ -138,8 +138,6 @@ The server doesn't reveice any message even when we stop sending messages to the
 
 
 
-
-
 b) we send messages to several different ports, on which no server is listening. In Wireshark, we can see ICMP Destination Unreachable messages, specifically Port Unreachable messages. It means that the UDP datagram reaches a computer but there is no application listening on the destinbation port, so the computer can send an ICMP error message to inform the sender that the port is unreachable 
 ![Wireshark](step9_a_server.png)
 
