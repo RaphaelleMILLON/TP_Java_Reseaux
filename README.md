@@ -203,7 +203,7 @@ Machine A:
 Machine B:
 
 
-
+![Machine_B](step13.png)
 
 
 
