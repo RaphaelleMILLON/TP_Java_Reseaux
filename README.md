@@ -102,10 +102,6 @@ The first 3 datagrams were successfully sent but for the 65,508 bytes datagram, 
 
 ![Client](step6.png)
 
-
-
-
-
 **Step 7**
 
 Here is the wireshark capture for localhost between 2 powershell (server and client) with protocol : UDP and with the port = 8080
@@ -114,3 +110,30 @@ Here is the wireshark capture for localhost between 2 powershell (server and cli
 In the Java programm, we change the int sizes int[] sizes = {10, 10000};
 
 ![Wireshark](wiresharkstep7cap2.png)
+
+We sent two datagrams from the client to the server : a small datagram containing 10 bytes and a large datagram containing 10,000 bytes.
+
+On the localhost interface, we have one IP packet for each datagram including the 10,000-byte datagram. This is because the loopback interface does not behave like a standard Ethernet network with an MTU of 1,500 bytes.
+![10,000-byte datagram ](step7_checksumlengthetc.png)
+
+
+**Step 8**
+a) The receive buffer is chosen by the receiver because it is the server that decides how much memory it wants to allocate to store incoming datagrams.
+
+The sender does not know the receiver's available memory or buffer size. If a datagram is larger than the receiver's buffer, the received data may be damage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
