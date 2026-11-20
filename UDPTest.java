@@ -17,7 +17,6 @@ public class UDPTest {
 
                 byte[] data = new byte[size];
 
-                // Remplir le message avec des caractères A
                 for (int i = 0; i < size; i++) {
                     data[i] = 'A';
                 }
