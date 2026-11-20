@@ -114,7 +114,7 @@ In the Java programm, we change the int sizes int[] sizes = {10, 10000};
 We sent two datagrams from the client to the server : a small datagram containing 10 bytes and a large datagram containing 10,000 bytes.
 
 On the localhost interface, we have one IP packet for each datagram including the 10,000-byte datagram. This is because the loopback interface does not behave like a standard Ethernet network with an MTU of 1,500 bytes.
-![10,000-byte datagram ](step7_checksumlengthetc.png)
+![10,000-byte datagram ](step7_checksumlenghtetc.png)
 
 
 **Step 8**
