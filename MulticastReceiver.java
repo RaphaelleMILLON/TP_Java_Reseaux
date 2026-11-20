@@ -10,7 +10,6 @@ public class MulticastReceiver {
 
     public static void main(String[] args) {
         try {
-            // Display available network interfaces
             Enumeration<NetworkInterface> interfaces =
                     NetworkInterface.getNetworkInterfaces();
 
@@ -30,10 +29,8 @@ public class MulticastReceiver {
                 return;
             }
 
-            // Multicast group address
             InetAddress group = InetAddress.getByName("239.0.0.1");
 
-            // Select the network interface
             NetworkInterface netIf =
                     NetworkInterface.getByName(args[0]);
 
@@ -42,10 +39,8 @@ public class MulticastReceiver {
                 return;
             }
 
-            // Create multicast socket
             MulticastSocket socket = new MulticastSocket(8888);
 
-            // Join the multicast group
             socket.joinGroup(
                     new InetSocketAddress(group, 8888),
                     netIf
