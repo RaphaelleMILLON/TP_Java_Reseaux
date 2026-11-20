@@ -210,6 +210,17 @@ We tried to run the server on one laptop (IP address 10.10.27.30, ENSEA Wi-Fi ne
 c) On localhost again, with a server that waits a few milliseconds (Thread.sleep) after each datagram
 received:
 
+<img width="521" height="55" alt="image" src="https://github.com/user-attachments/assets/73ac52e0-71ec-404f-a499-4d3bdaab3f5d" />
+
+<img width="704" height="91" alt="image" src="https://github.com/user-attachments/assets/939abe9c-41c4-4242-b3a3-ec12ea575598" />
+
+We restarted the server with a 1 ms pause (Thread.sleep(1)) after each received datagram, then sent the same burst of 10 000 datagrams. This time the server received only 6 690 of them, a loss rate of 33.10 %
+
+In case a), the server reads fast enough, so the buffer never fills up. In case c), the server reads more slowly than the client sends, so the buffer fills up and the extra datagrams are dropped.
+
+**Step 14**
+
+
 **Step 16**
 We created a Java class called MulticastReceiver to receive UDP multicast messages.
 
