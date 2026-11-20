@@ -278,9 +278,11 @@ Ok one receiver left the group and when we send a new message, he didn't receive
 
 c)
 
+
+![my_computer](step17_c_envoie.png)
 <img width="770" height="211" alt="image" src="https://github.com/user-attachments/assets/ca4b429d-c133-473b-9738-7e762ab24159" />
 
-
+We tested multicast communication between different computers. Each computer used its own network interface to join the multicast group 239.0.0.1 on port 8888.
 
 
 
