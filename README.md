@@ -205,5 +205,8 @@ Machine B:
 
 ![Machine_B](step13.png)
 
+We tried to run the server on one laptop (IP address 10.10.27.30, ENSEA Wi-Fi network) and the burst client on the other laptop, using the server’s IP address instead of localhost. We checked that the correct IP address was used and that no firewall was blocking the port, yet no datagram was received by the server, so the loss rate could not be measured
 
+c) On localhost again, with a server that waits a few milliseconds (Thread.sleep) after each datagram
+received:
 
