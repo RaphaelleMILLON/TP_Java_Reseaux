@@ -157,7 +157,13 @@ the IP address remains the same but the source port changed, therefore, we can c
 
 ![Client](step9_c_client.png)
 
+**Step 10**
+a) Experiment a) (server not started): with TCP, the client must open a connection before sending anything. If the server is not running, the connection fails immediately and the client gets an error (“Connection refused”). With UDP, the client sends its messages without any error, and they are simply lost.
+Experiment c) (client stopped and restarted): with TCP, the server knows when a client leaves, because the connection is closed. With UDP, there is no connection, so the server never knows that a client has stopped. In both cases, each new client gets a new port number.
 
+b) Because UDP is faster and lighter: there is no connection to open and no waiting for lost messages to be sent again.
+DNS: a request and its answer are very short. Opening a TCP connection would take longer than the request itself.
+Video streaming and online games: speed matters more than perfect delivery. A lost image or position is not a problem, but a delay would be: an old image or an old position arriving late is useless.
 
 **Step 11**
 
