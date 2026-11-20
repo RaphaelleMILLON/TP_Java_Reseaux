@@ -264,10 +264,11 @@ Here is the message
 ![4](step17_4.png)
 
 
+b) 
+Ok one receiver left the group and when we send a new message, he didn't receive anything compae to the others
+![4](step17_b_leave.png)
 
-
-
-
+![4](step17_b_receive.png)
 
 
 
