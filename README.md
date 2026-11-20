@@ -286,6 +286,11 @@ We tested multicast communication between our two different computers. Each comp
 
 **Step 18**
 ![step18](setp18_receive.png)
+
+
+Broadcast allows a UDP client to send a message to all hosts on the local network using the broadcast address.Unlike multicast, broadcast sends the message to all hosts on the local network, not only to hosts that have joined a specific multicast group.
+
+
 **Step 19**
 
 a) Unicast: the sender emits 20 datagrams, one per receiver. The same data crosses the network 20 times.
