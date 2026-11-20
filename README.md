@@ -166,6 +166,7 @@ DNS: a request and its answer are very short. Opening a TCP connection would tak
 Video streaming and online games: speed matters more than perfect delivery. A lost image or position is not a problem, but a delay would be: an old image or an old position arriving late is useless.
 
 **Step 11**
+
 ![Client](Step_11_01.png)
 
 The client prefixes the typed line with its sequence number and sends 0:hello. The server extracts the number and the text, and displays seq=0 -> hello, with the client’s address and port
